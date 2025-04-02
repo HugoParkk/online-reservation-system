@@ -1,0 +1,23 @@
+spring:
+  application:
+    name: online-reservation-system # Application name
+
+  # ????? ??
+  datasource:
+    driver-class-name: org.mariadb.jdbc.Driver
+    url: jdbc:mariadb://152.70.250.4:13306/online-reservation-system
+    username: root
+    password: trip-poor-admin!
+
+  # JPA ?? (datasource? ?? ??? ??)
+  jpa:
+    properties:
+      hibernate:
+        dialect: org.hibernate.dialect.MariaDBDialect
+        format_sql: true
+        use_sql_comments: true
+    hibernate:
+      ddl-auto: update
+    show-sql: true
+    database: mysql
+    database-platform: org.hibernate.dialect.MariaDBDialect
